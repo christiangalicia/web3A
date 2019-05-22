@@ -44,8 +44,10 @@
     width: 100%;
     margin: 0px;
     top: 0px;
+    z-index: 99;
 }
 body{
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
 }
 header h1{
@@ -76,11 +78,14 @@ nav ul li a{
 }
 
 .slider{
-    margin-top: 50px;
+    margin-top: 100px;
     background-image: url('../images/fondo.jpg');
     height: 400px;
     color: #ffffff;
     text-align: left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 .slider section h2{
     font-size: 60px;
@@ -162,15 +167,79 @@ nav ul li a{
     color: white;
     height: 0px;
     transition: all .5s;
-    position: relative;
+    position: absolute;
     bottom:0px;
-    
+    width: 100%;
+}
+.foto{
+    position: relative;
+    overflow: hidden;
+}
+.foto:hover img{
+    transform: scale(1.8, 1.8) rotate(10deg);
+    transition: all .5s;
+    filter: grayscale(80%);
 }
 .foto:hover .titulo{
     height: 30px;
     transition: all .5s;
-    bottom:30px;
+    
 }
 .galeria img{
-    width: 100%
+    width: 100%;
+    transition: all .5s;
+}
+
+.team span{
+    vertical-align: 30px;
+}
+.margen-80{
+    margin-top: 80px;
+}
+
+.slogan a{
+    display: inline-block;
+    padding: 15px;
+    margin: 10px;
+    background-color: #eeeeee;
+    color: #444444;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.formulario input, .formulario textarea{
+    width: 100%;
+    border-radius: 20px;
+    height: 60px;
+    border: 1px solid #888888;
+    padding: 15px;
+}
+.formulario textarea{
+height: 300px;
+}
+
+.formulario input[type='submit']{
+    width: 200px;
+    background-color: #e43c5c;
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: #000000;
+}
+footer a{
+    display: inline-block;
+    background-color: #444444;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.mapa iframe{
+    width: 100%;
+    height: 400px;
+    filter: grayscale(80%);
 }
